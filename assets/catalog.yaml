@@ -3,7 +3,7 @@ publisher: The MIT Press
 isbn: 0-262-01153-0
 subjects: ["Science, North America"]
 access: ["Electronic digital computers -- Programming", "LISP (Computer program language)", "Series: MIT electrical engineering and computer"]
-udc: 869.0(81)
+ddc: "005.13"
 before: |
   The MIT Press
 
