@@ -2453,14 +2453,15 @@ Procedures, as introduced above, are much like ordinary mathematical functions.
 They specify a value that is determined by one or more parameters.  But there
 is an important difference between mathematical functions and computer
 procedures.  Procedures must be effective.
+頂面介紹ê程序，其實就像一般 ê 數學函數。程序會指定一个值，這个值由一个到幾若个參數決定ê。
+毋過，數學函數佮電腦程序有一个重要 ê 差別：lán希望程序有效率 (effective)。
 
 程序親像頂懸紹介ê，足sêng一般ê數學函數。In指定一个值，由一个以上ê參數決定。毋過數學ê函數kap
 電腦ê程序有重要ê無kâng。程序愛有效率。
 
 As a case in point, consider the problem of computing square roots.  We can
 define the square-root function as
-
-舉一个例，考慮算平方根ê問題。Lán通定義平方根函數做
+舉例來講，考慮平方根ê計算問題。Lán 會使 kā 平方根函數定義做
 
 @ifinfo
 
@@ -2480,10 +2481,6 @@ not describe a procedure.  Indeed, it tells us almost nothing about how to
 actually find the square root of a given number.  It will not help matters to
 rephrase this definition in pseudo-Lisp:
 
-Che定義完美koh有效ê數學函數。Lán 會當用che辨別一个數敢是別个數ê平方根，á是推論關係平方根ê
-一般事實。另外方面，定義bōe當描述程序。確實，伊強強無講任何chhōe一个數ê平方根ê方法。共定義
-用假Lisp碼寫mā無幫chān：
-
 @lisp
 (define (sqrt x)
   (the y (and (>= y 0)
@@ -2492,9 +2489,8 @@ Che定義完美koh有效ê數學函數。Lán 會當用che辨別一个數敢是�
 
 @noindent
 This only begs the question.
-
 @noindent
-Che kan-ta求乞問題。
+這也是閃避問題爾爾。
 
 The contrast between function and procedure is a reflection of the general
 distinction between describing properties of things and describing how to do
