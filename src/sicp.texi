@@ -2513,6 +2513,9 @@ is'' knowledge specified by the programmer, they can generate ``how to''
 knowledge automatically.  This cannot be done in general, but there are
 important areas where progress has been made.  We shall revisit this idea in
 @ref{Chapter 4}.}
+函數kah程序之間ê差別反映描說物件ê性質kah描說按若做代誌ê一般性區別，抑是所謂宣告式知識kah指令式知識之間ê區別。
+Tī數學內底，lán通常關心ê是宣告（伊是啥物），毋過tī電腦科學內底，lán通常關心ê是指令（按若做）。
+@footnote{宣告kah指令有密切ê關係，數學kah電腦科學嘛是按呢。比論講，講一个程式產生ê答案是「正確」ê，就是一个程式ê宣告式陳述。有真濟研究咧建立技術來證明程式是正確ê，而且這个主題ê技術困難大部分kah協商指令式陳述（程式是按呢構成ê）kah宣告式陳述（thang 用來推論代誌）之間ê轉換有關係。Tī這个方向，程式語言設計ê一个重要ê當今領域是探索所謂 ê 足懸階語言，用宣告式陳述來寫程式。這个想法是kā直譯器做kah夠巧，按呢，根據程式設計者指定ê「是啥物」知識，伊自動產生「按怎做」知識。這無法度tī一般情況做到，毋過tī一寡重要ê領域已經有進展。Lán會tī @ref{Chapter 4} 重新探討這个想法。}
 
 函數kap程序ê對比是一般佇描述代誌ê性質kap按怎做ê方法之間ê區別ê反映。或者親像有時á所指ê，宣告式智識
 kap命令式智識之間ê區別。佇數學lán定定關注有宣告式（是啥物）描述ê智識，毋過佇電腦科學lán定定關心命
