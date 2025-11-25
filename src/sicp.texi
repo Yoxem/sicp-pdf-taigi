@@ -2456,9 +2456,6 @@ procedures.  Procedures must be effective.
 頂面介紹ê程序，其實就像一般 ê 數學函數。程序會指定一个值，這个值由一个到幾若个參數決定ê。
 毋過，數學函數佮電腦程序有一个重要 ê 差別：lán希望程序有效率 (effective)。
 
-程序親像頂懸紹介ê，足sêng一般ê數學函數。In指定一个值，由一个以上ê參數決定。毋過數學ê函數kap
-電腦ê程序有重要ê無kâng。程序愛有效率。
-
 As a case in point, consider the problem of computing square roots.  We can
 define the square-root function as
 舉例來講，考慮平方根ê計算問題。Lán 會使 kā 平方根函數定義做
