@@ -2477,6 +2477,9 @@ facts about square roots in general.  On the other hand, the definition does
 not describe a procedure.  Indeed, it tells us almost nothing about how to
 actually find the square root of a given number.  It will not help matters to
 rephrase this definition in pseudo-Lisp:
+Che定義完美koh有效ê數學函數。Lán 會當用che辨別一个數敢是別个數ê平方根，á是推論關係平方根ê
+一般事實。另外方面，定義bōe當描述程序。確實，伊強強無講任何chhōe一个數ê平方根ê方法。共定義
+用假Lisp碼寫mā無幫chān：
 
 @lisp
 (define (sqrt x)
