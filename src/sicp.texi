@@ -2885,6 +2885,8 @@ depends upon the hardware available.  There are machines for which the
 ``obvious'' implementation is the less efficient one.  Consider a machine that
 has extensive tables of logarithms and antilogarithms stored in a very
 efficient manner.}
+所以考慮程序傳回來ê值，下底兩个計算數字平方ê程序是無法度區分ê。兩个程序lóng有一个數值引數，而且結果攏是彼个數字ê平方。
+@footnote{甚至lán無法度講出 tó 一个程序較有效率。因為這由硬體來決定。有一寡機器予「明顯」ê寫法較無效率。比論一台機器，毋但有足濟對數 kap 反對數表，閣用有效率ê方式留存。}
 
 @lisp
 (define (square x) (* x x))
