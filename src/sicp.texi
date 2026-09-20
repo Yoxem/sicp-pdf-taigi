@@ -12529,15 +12529,13 @@ construct the expression @code{(car '(a b c))}, which is the same as @code{(car
 引用mā允准lán佇複合物件內底輸入，用列單ê傳統印出ê表示法：
 @footnote{嚴嚴來講，lán ê引號ê用法違背逐ê複合表達式佇lán ê語言內底應該用括弧區分，mā
 著看起來像列單ê一般規則。Lán ē當引用特殊形式@code{quote}，來恢復chit ê一致，
-@code{quote}kap引號ê目的siâng款。/以下等待翻譯/ 自án-ne，lán通拍@code{(quote a)}
+@code{quote} kap引號ê目的siâng款。自án-ne，lán通拍@code{(quote a)}
 毋免拍@code{'a}；koh lán通拍@code{(quote (a b c))}，毋免拍 @code{'(a b c)}。
-This is precisely how the interpreter works.  The quotation mark is just a
-single-character abbreviation for wrapping the next complete expression with
-@code{quote} to form @math{\hbox{\ttfamily(quote}\;\langle\kern0.06em\hbox{\ttfamily\slshape expression}\kern0.08em\rangle\hbox{\ttfamily)}}.  This is
-important because it maintains the principle that any expression seen by the
-interpreter can be manipulated as a data object.  For instance, we could
-construct the expression @code{(car '(a b c))}, which is the same as @code{(car
-(quote (a b c)))}, by evaluating @code{(list 'car (list 'quote '(a b c)))}.}
+Che拄好是編譯器運作ê方法，引號kan-ta是孤字元ê縮略，來建立
+@math{\hbox{\ttfamily(quote}\;\langle\kern0.06em\hbox{\ttfamily\slshape 表達式}\kern0.08em\rangle\hbox{\ttfamily)}}。
+Che chiâⁿ重要，因為伊維持編譯器所看著ê逐ê表達式，ē當當做資料物件來操作。比如講，lán ē當
+用算 @code{(list 'car (list 'quote '(a b c)))} ê值，來起造表達式
+@code{(car '(a b c))}，伊kap @code{(car (quote (a b c)))}siâng款。}
 
 @lisp
 (car '(a b c))
