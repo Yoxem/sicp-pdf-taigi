@@ -12548,6 +12548,9 @@ Che chiâⁿ重要，因為伊維持編譯器所看著ê逐ê表達式，ē當�
 In keeping with this, we can obtain the empty list by evaluating @code{'()},
 and thus dispense with the variable @code{nil}.
 
+@noindent
+為著照che，lán通用算@code{'()} ê值來the̍h著空ê列單，因此毋免用變數 @code{nil}。
+
 One additional primitive used in manipulating symbols is @code{eq?}, which
 takes two symbols as arguments and tests whether they are the same.@footnote{We
 can consider two symbols to be ``the same'' if they consist of the same
@@ -12559,6 +12562,14 @@ takes two arguments, a symbol and a list.  If the symbol is not contained in
 the list (i.e., is not @code{eq?} to any item in the list), then @code{memq}
 returns false.  Otherwise, it returns the sublist of the list beginning with
 the first occurrence of the symbol:
+
+一个加添操作符號ê基礎函數是 @code{eq?}，伊the̍h兩个符號當做引數，試in敢kâng款。
+@footnote{若準in包含仝款ê字元，排列koh仝款，lán就ē當kā兩个符號掠做「相kâng」。Án-ne
+ê定義khau過一个lán iáu bōe備辦好勢來解決ê，深深ê議題：佇程式語言內底，「相kâng度」ê意
+思。Lán佇 @ref{Chapter 3} ē轉去hit ê主題(@ref{3.1.3})。}用 @code{eq?}，lán通實做
+一个有路用ê程序，號做 @code{memq}。伊the̍h兩个引數，一个符號kap一个列單。符號若無包佇列
+單內底（就是對列單ê逐項lóng無 @code{eq?}），@code{memq} 傳轉假。A̍h無，伊傳轉頭一改出
+現hit ê符號開始ê，輸入列單ê kiáⁿ列單：
 
 @lisp
 (define (memq item x)
