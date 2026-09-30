@@ -12581,12 +12581,18 @@ the first occurrence of the symbol:
 @noindent
 For example, the value of
 
+@noindent
+比論講，
+
 @lisp
 (memq 'apple '(pear banana prune))
 @end lisp
 
 @noindent
 is false, whereas the value of
+
+@noindent
+ê值是假，同時
 
 @lisp
 (memq 'apple '(x (apple sauce) y apple pear))
@@ -12595,9 +12601,14 @@ is false, whereas the value of
 @noindent
 is @code{(apple pear)}.
 
+@noindent
+ê值是 @code{(apple pear)}。
+
 @quotation
 @strong{@anchor{Exercise 2.53}Exercise 2.53:} What would the interpreter print
 in response to evaluating each of the following expressions?
+
+@strong{Exercise 2.53:}算下kha逐ê表達式了後，直譯器ē印出啥物？
 
 @lisp
 (list 'a 'b 'c)
@@ -12615,12 +12626,19 @@ in response to evaluating each of the following expressions?
 @code{equal?} if they contain equal elements arranged in the same order.  For
 example,
 
+@noindent
+@strong{Exercise 2.54:} 若是兩个列單包含相kâng ê要素，koh照kâng款ê順序排，in就ē當講
+是@code{equal?}。舉例：
+
 @lisp
 (equal? '(this is a list) '(this is a list))
 @end lisp
 
 @noindent
 is true, but
+
+@noindent
+是真ê，毋kú
 
 @lisp
 (equal? '(this is a list) '(this (is a) list))
@@ -12640,17 +12658,26 @@ highly implementation-dependent.  A better definition of @code{equal?} (such as
 the one that comes as a primitive in Scheme) would also stipulate that if
 @code{a} and @code{b} are both numbers, then @code{a} and @code{b} are
 @code{equal?} if they are numerically equal.}
+
+@noindent
+是假ê。Kah準確講，lán通the̍h基礎ê @code{eq?} ê符號相等性，怙若是 @code{a} kap @code{b} 兩个是符號koh @code{eq?}，iah是in兩个lóng是滿足@code{(car a)} kap @code{(car b)} 是 @code{equal?}，而且@code{(cdr a)} kap @code{(cdr b)}是 @code{equal?}，就 @code{a} kap @code{b} 是 @code{equal?} ê原則，來遞迴定義 @code{equal?}。The̍h chit个想法，實做 @code{equal?} 程序。@footnote{實際上，程式設計師用 @code{equal?} 來比較包含數kap符號ê列單。數無予儂掠做是符號。兩个數值上相kâng ê數（用 @code{=} 試）敢mā是 @code{eq?}，足倚靠實做內容。@code{equal?}（像做Scheme ê基礎函數ê）koh較好ê實做，iā規範若準 @code{a} kap @code{b} lóng是數，koh數值上相kâng，in就 @code{equal?}。}
+
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 2.55}Exercise 2.55:} Eva Lu Ator types to the
 interpreter the expression
 
+@strong{Exercise 2.55:} Eva Lu Ator拍下kha ê表達式，輸入kàu直譯器
+
 @lisp
 (car ''abracadabra)
 @end lisp
 
 To her surprise, the interpreter prints back @code{quote}.  Explain.
+
+伊誠好奇，直譯器印出 @code{quote}。請解說。
+
 @end quotation
 
 @subsection Example: Symbolic Differentiation
