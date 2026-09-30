@@ -12660,7 +12660,15 @@ the one that comes as a primitive in Scheme) would also stipulate that if
 @code{equal?} if they are numerically equal.}
 
 @noindent
-是假ê。Kah準確講，lán通the̍h基礎ê @code{eq?} ê符號相等性，怙若是 @code{a} kap @code{b} 兩个是符號koh @code{eq?}，iah是in兩个lóng是滿足@code{(car a)} kap @code{(car b)} 是 @code{equal?}，而且@code{(cdr a)} kap @code{(cdr b)}是 @code{equal?}，就 @code{a} kap @code{b} 是 @code{equal?} ê原則，來遞迴定義 @code{equal?}。The̍h chit个想法，實做 @code{equal?} 程序。@footnote{實際上，程式設計師用 @code{equal?} 來比較包含數kap符號ê列單。數無予儂掠做是符號。兩个數值上相kâng ê數（用 @code{=} 試）敢mā是 @code{eq?}，足倚靠實做內容。@code{equal?}（像做Scheme ê基礎函數ê）koh較好ê實做，iā規範若準 @code{a} kap @code{b} lóng是數，koh數值上相kâng，in就 @code{equal?}。}
+是假ê。Kah準確講，lán通the̍h基礎ê @code{eq?} ê符號相等性，怙若是 @code{a} kap
+@code{b} 兩个是符號koh @code{eq?}，iah是in兩个lóng是滿足@code{(car a)} kap
+@code{(car b)} 是 @code{equal?}，而且@code{(cdr a)} kap @code{(cdr b)}是
+@code{equal?}，就 @code{a} kap @code{b} 是 @code{equal?} ê原則，來遞迴定義
+@code{equal?}。請the̍h chit个想法，實做 @code{equal?} 程序。@footnote{實際上，程式設
+計師用 @code{equal?} 來比較包含數kap符號ê列單。數無予儂掠做是符號。兩个數值上相kâng ê
+數（用 @code{=} 試）敢mā是 @code{eq?}，足倚靠實做內容。@code{equal?}（像做Scheme ê基
+礎函數ê）koh較好ê實做，iā規範若準 @code{a} kap @code{b} lóng是數，koh數值上相kâng，in
+就 @code{equal?}。}
 
 @end quotation
 
