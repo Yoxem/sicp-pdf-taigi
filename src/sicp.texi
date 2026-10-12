@@ -12719,6 +12719,10 @@ algorithm that operates on abstract objects such as ``sums,'' ``products,'' and
 ``variables'' without worrying about how these are to be represented.  Only
 afterward will we address the representation problem.
 
+佇開發chit ê符號積分ê程式，lán ē跟tòe佇 @ref{2.1.1} 開發有理數系統所tòe ê資料抽象化ê策
+略。就是，lán ē先定義操作比論「和」、「積」kap「變數」等抽象物件ê微分演算法，毋免煩惱
+chia ê beh án-nóa表示。Kan-ta佇落尾，lán ē處理表示ê問題。
+
 @subsubheading The differentiation program with abstract data
 
 In order to keep things simple, we will consider a very simple
