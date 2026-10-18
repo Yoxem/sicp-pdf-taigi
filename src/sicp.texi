@@ -12723,13 +12723,18 @@ afterward will we address the representation problem.
 略。就是，lán ē先定義操作比論「和」、「積」kap「變數」等抽象物件ê微分演算法，毋免煩惱
 chia ê beh án-nóa表示。Kan-ta佇落尾，lán ē處理表示ê問題。
 
-@subsubheading The differentiation program with abstract data
+@subsubheading The differentiation program with abstract data 有抽象資料ê微分程式
 
 In order to keep things simple, we will consider a very simple
 symbolic-differentiation program that handles expressions that are built up
 using only the operations of addition and multiplication with two arguments.
 Differentiation of any such expression can be carried out by applying the
 following reduction rules:
+
+@noindent
+為著保持代誌攏簡單，lán ē考慮非常簡單ê，有兩个引數ê符號微分程式，伊處理kan-ta怙加法
+kap乘法操作建立ê表達式。任何tsit款ê表達式ê微分，ē當用應用下kha ê簡約規則實行：
+
 @ifinfo
 
 @example
