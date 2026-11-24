@@ -598,7 +598,7 @@ a digital computer.  Using Lisp we restrict or limit not what we may program,
 but only the notation for our program descriptions.
 
 \lettrine{教}{育者、將軍、營養師}、心理學家、兩親設計計畫。
-@footnote{英語 to program 除了有「程式設計」ê意思以外，mā有
+@footnote{譯註：英語 to program 除了有「程式設計」ê意思以外，mā有
 「規畫計畫kap程序等」ê意思}軍隊、學生、kap一寡社會受規畫。大ê問題ê衝擊應用連sòa ê程式，in大半
 liâm-mī佇路ni̍h佇leh。Chiah ê程式充滿出現佇手頭ê特別ê問題。Beh 欣賞伊家kī準做智力活動ê程式設計，
 Lí著oat轉來寫程式；lí著讀kap寫電腦程式——chē-chē篇。程式ê目的kap應用lóng無siáⁿ差別。有差ê是
@@ -12733,7 +12733,7 @@ following reduction rules:
 
 @noindent
 為著保持代誌攏簡單，lán ē考慮非常簡單ê，有兩个引數ê符號微分程式，伊處理kan-ta怙加法
-kap乘法操作建立ê表達式。任何tsit款ê表達式ê微分，ē當用應用下kha ê簡約規則實行：
+kap乘法操作建立ê表達式。任何chit款ê表達式ê微分，ē當用應用下kha ê簡約規則實行：
 
 @ifinfo
 
@@ -12757,10 +12757,10 @@ d(uv)     / dv \     / du \
 
 @end ifinfo
 @tex
-$$
-{{\it dc} \over {\it dx}} 		= 0,
-	\quad {\rm for\ } c\ {\rm a\ constant\ or\ a\ variable\ different\ from\ } x,
-$$
+$$\displaylines{
+{{\it dc} \over {\it dx}} 		= 0, \quad {\rm for\ } c\ {\rm a\ constant\ or\ a\ variable\ different\ from\ } x\cr
+\text{其中} c\ \text{是常數，iah是毋是} x\ \text{ê整數}
+}$$
 @end tex
 @tex
 $$
@@ -12785,6 +12785,11 @@ decomposed.  Decomposing into smaller and smaller pieces will eventually
 produce pieces that are either constants or variables, whose derivatives will
 be either 0 or 1.
 
+@noindent
+觀察上尾兩个規則佇實質是遞迴ê。就是beh the̍h著和ê導數，lán著tshuē項ê導數，koh加in。其中
+逐項就án-ne有可能是需要分解ê表達式。分解做ná來ná細ê片，落尾ē產出常數iah是變數ê phí-á，
+伊ê導數ê時0或者是1。
+
 To embody these rules in a procedure we indulge in a little wishful thinking,
 as we did in designing the rational-number implementation.  If we had a means
 for representing algebraic expressions, we should be able to tell whether an
@@ -12795,22 +12800,35 @@ should also be able to construct expressions from parts.  Let us assume that we
 already have procedures to implement the following selectors, constructors, and
 predicates:
 
+Beh kā chiah ê規則包佇程序，lán著浸佇小寡向望ê思想，像lán佇設計有理數實做所行ê。Lán若有
+方法來表示代數表達式，lán應該通講表達式kám是和、乘積、常數，iah是變數。Lán應該通抽出表
+達式ê部份。比論講，對和，lán想beh ē當抽出加數（頭一項）kap被加數（第二項）。
+@footnote{譯註：加數應該是第二項，被加數應該是第一項。但是chia顧全頂下文ê一致，照原文寫。}
+Lán應該iā ē當對部份起造表達式。Lán著假設lán已經有程序來實做下kha ê揀選器、建構器kap謂詞：
+
 @lisp
-(variable? e)            @r{Is @code{e} a variable?}
+(variable? e)            @r{Is @code{e} a variable?\qquad @code{e}kám是變數？}
 (same-variable? v1 v2)   @r{Are @code{v1} and @code{v2} the same variable?}
-(sum? e)                 @r{Is @code{e} a sum?}
-(addend e)               @r{Addend of the sum @code{e}.}
-(augend e)               @r{Augend of the sum @code{e}.}
+                         @r{@code{v1} kap @code{v2} 兩个變數kám kâng款？}
+(sum? e)                 @r{Is @code{e} a sum?\qquad @code{e} kám kâng款？}
+(addend e)               @r{Addend of the sum @code{e}.\qquad @code{e} ê加數。}
+(augend e)               @r{Augend of the sum @code{e}.\qquad @code{e} ê被加數。}
 (make-sum a1 a2)         @r{Construct the sum of @code{a1} and @code{a2}.}
-(product? e)             @r{Is @code{e} a product?}
-(multiplier e)           @r{Multiplier of the product @code{e}.}
+                         @r{起造@code{a1} kap @code{a2} ê和。}
+(product? e)             @r{Is @code{e} a product?\qquad @code{e} kám是乘積？}
+(multiplier e)           @r{Multiplier of the product @code{e}.\qquad @code{e} ê乘數。}
 (multiplicand e)         @r{Multiplicand of the product @code{e}.}
+                         @r{@code{e} ê被乘數。}
 (make-product m1 m2)     @r{Construct the product of @code{m1} and @code{m2}.}
+                         @r{起造@code{m1} kap @code{m2} ê積。}
 @end lisp
 
 @noindent
 Using these, and the primitive predicate @code{number?}, which identifies
 numbers, we can express the differentiation rules as the following procedure:
+
+@noindent
+用chia-ê，kap基礎謂詞@code{number?}，伊辨別數，lán ē當kā微分規則表達做下kha ê程序：
 
 @lisp
 (define (deriv exp var)
@@ -12835,7 +12853,12 @@ matter how we choose to represent algebraic expressions, as long as we design a
 proper set of selectors and constructors.  This is the issue we must address
 next.
 
-@subsubheading Representing algebraic expressions
+@noindent
+Chit ê @code{deriv} 程序包括kui ê微分演算法。因為伊用抽象資料表達，只要lán設計一个妥當ê揀
+選器kap建構器ê集合，無論lán án-nóa揀代數表達式，伊lóng ē pháng。Che是lán著愛處理ê下一个議
+題。
+
+@subsubheading Representing algebraic expressions 表示代數表達式
 
 We can imagine many ways to use list structure to represent algebraic
 expressions.  For example, we could use lists of symbols that mirror the usual
